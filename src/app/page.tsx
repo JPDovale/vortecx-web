@@ -1,113 +1,385 @@
+import {
+	AppWindow,
+	ChevronsRight,
+	ClipboardCheck,
+	Code,
+	PencilLine,
+	ScreenShareIcon,
+	Server,
+	Settings,
+	ShieldPlus,
+	TrendingUp,
+} from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<div className="min-h-screen w-screen max-w-full flex flex-col overflow-x-hidden">
+			<section className="w-full absolute -z-10 bg-gray-900">
+				<Image
+					className="w-full object-contain transform -scale-y-100 opacity-60"
+					src="/back.webp"
+					alt=""
+					width={1920}
+					height={1080}
+					quality={100}
+					priority
+				/>
+				<span
+					aria-hidden
+					className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"
+				/>
+			</section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+			<section className="w-full max-w-7xl px-4 flex flex-col mx-auto text-gray-200">
+				<header className="bg-gray-600/30 flex z-10 items-center justify-between px-4 py-3 mt-8 rounded-full backdrop-blur-md shadow-2xl shadow-black/50 fixed w-full max-w-7xl self-center">
+					<div className="flex items-center gap-2">
+						<Image
+							src="/logo-nb.png"
+							alt=""
+							width={28}
+							height={28}
+							quality={100}
+							priority
+						/>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+						<Link
+							href="https://vortecxx.com"
+							className="font-bold leading-none text-xl text-gray800 relative"
+						>
+							Vortecxx
+						</Link>
+					</div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+					<nav>
+						<ul className="flex items-center gap-4">
+							<li>
+								<Link
+									href="/"
+									className="font-bold opacity-40 hover:opacity-100 hover:text-violet-400 ease-in duration-200"
+								>
+									Inicio
+								</Link>
+							</li>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+							<li>
+								<Link
+									href="#services"
+									className="font-bold opacity-40 hover:opacity-100 hover:text-violet-400 ease-in duration-200"
+								>
+									Serviços
+								</Link>
+							</li>
+							{/* 
+							<li>
+								<Link
+									href="/"
+									className="font-bold opacity-40 hover:opacity-100 hover:text-violet-400 ease-in duration-200"
+								>
+									Sobre
+								</Link>
+							</li> */}
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+							<li>
+								<Link
+									href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!"
+									className="font-bold opacity-40 hover:opacity-100 hover:text-violet-400 ease-in duration-200"
+								>
+									Contato
+								</Link>
+							</li>
+						</ul>
+					</nav>
+
+					<div className="space-x-4">
+						<Link
+							href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!"
+							className="px-4 py-1 rounded-full shadow-md shadow-white/10 hover:shadow-lg hover:shadow-white/20 ease-in duration-200"
+						>
+							Contato
+						</Link>
+
+						{/* <button
+							type="button"
+							className="px-4 py-1 rounded-full shadow-md shadow-white/10 hover:shadow-lg hover:shadow-white/20 ease-in duration-200"
+						>
+							Registrar
+						</button> */}
+					</div>
+				</header>
+
+				<div className="mt-32">
+					<section className="grid grid-cols-2 gap-10 pb-60">
+						<div className="flex flex-col gap-4 mt-6">
+							<h1 className="text-8xl font-black w-full relative">
+								Software <br /> como você nunca viu!
+								<ScreenShareIcon
+									size={54}
+									className="absolute top-7 right-16 bg-violet-700 p-2 rounded-xl shadow-lg shadow-white/20"
+								/>
+							</h1>
+
+							<div className="flex items-center gap-4">
+								<span className="w-36 p-px rounded-full bg-gray-100/30" />
+								<p className="text-sm font-bold flex items-center gap-2">
+									<span className="opacity-60">É com a</span>{" "}
+									<strong className="text-xl">Vortecxx</strong>
+								</p>
+							</div>
+						</div>
+
+						<div className="flex flex-col gap-4">
+							<p className="mt-6 p-4 bg-gray-600/30 backdrop-blur-sm rounded-xl">
+								A única fabrica de software que faz o seu negócio o crescer
+								através da criatividade e inovação. A Vortecxx foca na
+								construção de soluções inovadoras e de alta qualidade
+								proporcionando o melhor resultado para seus negócios de uma
+								forma que você nunca viu antes.
+							</p>
+
+							<ul className="flex flex-col gap-2">
+								<li className="flex items-start gap-2 font-bold border-l-4 border-l-purple-700 pl-4 bg-gray-700/30 py-1.5 rounded-xl">
+									<Code className="fill-purple-700" /> Alta performance
+								</li>
+								<li className="flex items-start gap-2 font-bold border-l-4 border-l-purple-700 pl-4 bg-gray-700/30 py-1.5 rounded-xl">
+									<Server className="fill-purple-700" /> Alta disponibilidade
+								</li>
+								<li className="flex items-start gap-2 font-bold border-l-4 border-l-purple-700 pl-4 bg-gray-700/30 py-1.5 rounded-xl">
+									<AppWindow className="fill-purple-700" /> Do jeito que você
+									gosta
+								</li>
+								<li className="flex items-start gap-2 font-bold border-l-4 border-l-purple-700 pl-4 bg-gray-700/30 py-1.5 rounded-xl">
+									<ClipboardCheck className="fill-purple-700" /> Diversos
+									software/sites entregues
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</section>
+
+			<hr className="opacity-20" />
+
+			<section className="w-full pb-40 bg-gray-100 z-20">
+				<main className="w-full max-w-7xl mx-auto mt-12">
+					<section className="flex flex-col">
+						<h3 className="font-bold text-xl text-violet-800" id="services">
+							Serviços
+						</h3>
+
+						<ul className="grid grid-cols-2 gap-12 gap-y-40 mt-6">
+							<li className="flex flex-col gap-2">
+								<h5 className="text-5xl font-extrabold">
+									O Seu Site Online Rápido, Bonito e Estratégico
+								</h5>
+								<p className="font-bold opacity-70 mt-3">
+									Já se imaginou com milhares de usuários contente com a
+									eficiência do seu atendimento ou até mesmo com o conteúdo que
+									você produz? Aqui na Vortecxx conseguimos entregar um site que
+									esteja totalmente ajustado com os seus interesses e o
+									crescimento da sua empresa de uma forma rápida e estratégica
+									para o sucesso do seu negócio.
+								</p>
+
+								<ul className="grid grid-cols-2 gap-x-2 gap-y-6 mt-2">
+									<li className="flex flex-col gap-2 border-l-4 border-l-violet-900 pl-2 py-1.5 rounded-xl shadow-xl">
+										<div className="flex gap-0.5 items-center font-bold">
+											<span className="p-1.5 bg-gray-300 rounded-full">
+												<Server size={14} className="text-violet-800" />
+											</span>
+											<span className="opacity-60">
+												Uma vez no ar, sempre no ar!
+											</span>
+										</div>
+										<span className="text-xs font-semibold">
+											Nós temos uma infraestrutura própria e conseguimos manter
+											o seu site online por longos períodos de tempo
+										</span>
+									</li>
+
+									<li className="flex flex-col gap-2 border-l-4 border-l-violet-900 pl-2 py-1.5 rounded-xl shadow-xl">
+										<div className="flex gap-0.5 items-center font-bold">
+											<span className="p-1.5 bg-gray-300 rounded-full">
+												<ChevronsRight size={14} className="text-violet-800" />
+											</span>
+											<span className="opacity-60">
+												Velocidade é nosso sobrenome.
+											</span>
+										</div>
+										<span className="text-xs font-semibold">
+											O seu site será criado com tecnologia de ponta e será a
+											própria Velocidade.
+										</span>
+									</li>
+
+									<li className="flex flex-col gap-2 border-l-4 border-l-violet-900 pl-2 py-1.5 rounded-xl shadow-xl">
+										<div className="flex gap-0.5 items-center font-bold">
+											<span className="p-1.5 bg-gray-300 rounded-full">
+												<PencilLine size={14} className="text-violet-800" />
+											</span>
+											<span className="opacity-60">Você no controle</span>
+										</div>
+										<span className="text-xs font-semibold">
+											A gente disponibiliza um gestor de conteúdo integrado ao
+											seu site para que você possa mudar o que quiser.
+										</span>
+									</li>
+
+									<li className="flex flex-col gap-2 border-l-4 border-l-violet-900 pl-2 py-1.5 rounded-xl shadow-xl">
+										<div className="flex gap-0.5 items-center font-bold">
+											<span className="p-1.5 bg-gray-300 rounded-full">
+												<TrendingUp size={14} className="text-violet-800" />
+											</span>
+											<span className="opacity-60">Você no controle</span>
+										</div>
+										<span className="text-xs font-semibold">
+											Relaxe! Afinal de contas nós fazemos atualização de
+											segurança constantemente no seu site!
+										</span>
+									</li>
+								</ul>
+
+								<div className="mt-6 space-x-2">
+									<Link
+										href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!"
+										className="px-6 py-1.5 bg-violet-600 text-sm font-bold rounded-full text-gray-200 hover:bg-violet-500 transition-colors"
+									>
+										Fale conosco
+									</Link>
+
+									{/* <button
+										className="px-6 py-1.5 bg-violet-600 text-sm font-bold rounded-full text-gray-200 hover:bg-violet-500 transition-colors"
+										type="button"
+									>
+										Mais detalhes
+									</button> */}
+								</div>
+							</li>
+
+							<li className="rounded-lg">
+								<Image
+									src="/web-site1.jpg"
+									alt=""
+									width={1000}
+									height={1000}
+									quality={100}
+								/>
+							</li>
+
+							<li className="flex flex-col gap-2">
+								<h5 className="text-5xl font-extrabold">
+									O Seu Sonho, Com a Vortecxx É Realidade
+								</h5>
+								<p className="font-bold opacity-70 mt-3">
+									Aquela sua ideia incrível de aplicativo só esperando um
+									primeiro passo merece uma produção a altura. Aqui na Vortecxx
+									a gente atua na linha de frente de toda a produção do seu app,
+									seja ele para sua loja física ou virtual, seja ele um negócio
+									nascendo agora.
+								</p>
+
+								<ul className="grid grid-cols-2 gap-x-2 gap-y-6 mt-2">
+									<li className="flex flex-col gap-2 border-l-4 border-l-violet-900 pl-2 py-1.5 rounded-xl shadow-xl">
+										<div className="flex gap-0.5 items-center font-bold">
+											<span className="p-1.5 bg-gray-300 rounded-full">
+												<Server size={14} className="text-violet-800" />
+											</span>
+											<span className="opacity-60">Com a gente você pode!</span>
+										</div>
+										<span className="text-xs font-semibold">
+											Nós planejamos, produzimos e colocamos o seu app no ar.
+										</span>
+									</li>
+
+									<li className="flex flex-col gap-2 border-l-4 border-l-violet-900 pl-2 py-1.5 rounded-xl shadow-xl">
+										<div className="flex gap-0.5 items-center font-bold">
+											<span className="p-1.5 bg-gray-300 rounded-full">
+												<ShieldPlus size={14} className="text-violet-800" />
+											</span>
+											<span className="opacity-60">
+												Segurança para o seu negócio.
+											</span>
+										</div>
+										<span className="text-xs font-semibold">
+											Nós monitoramos o seu app 24 horas por dia, 7 dias por
+											semana.
+										</span>
+									</li>
+
+									<li className="flex flex-col gap-2 border-l-4 border-l-violet-900 pl-2 py-1.5 rounded-xl shadow-xl">
+										<div className="flex gap-0.5 items-center font-bold">
+											<span className="p-1.5 bg-gray-300 rounded-full">
+												<Settings size={14} className="text-violet-800" />
+											</span>
+											<span className="opacity-60">Você no controle</span>
+										</div>
+										<span className="text-xs font-semibold">
+											Você tem pode gerenciar todas as partes do seu aap.
+										</span>
+									</li>
+
+									<li className="flex flex-col gap-2 border-l-4 border-l-violet-900 pl-2 py-1.5 rounded-xl shadow-xl">
+										<div className="flex gap-0.5 items-center font-bold">
+											<span className="p-1.5 bg-gray-300 rounded-full">
+												<TrendingUp size={14} className="text-violet-800" />
+											</span>
+											<span className="opacity-60">Você no controle</span>
+										</div>
+										<span className="text-xs font-semibold">
+											Flexibilidade e um sonho realizado com a gente.
+										</span>
+									</li>
+								</ul>
+
+								<div className="mt-6 space-x-2">
+									<Link
+										href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!"
+										className="px-6 py-1.5 bg-violet-600 text-sm font-bold rounded-full text-gray-200 hover:bg-violet-500 transition-colors"
+									>
+										Fale conosco
+									</Link>
+
+									{/* <button
+										className="px-6 py-1.5 bg-violet-600 text-sm font-bold rounded-full text-gray-200 hover:bg-violet-500 transition-colors"
+										type="button"
+									>
+										Mais detalhes
+									</button> */}
+								</div>
+							</li>
+							<li className="rounded-lg">
+								<Image
+									src="/web-app1.png"
+									alt=""
+									width={1000}
+									height={1000}
+									quality={100}
+								/>
+							</li>
+						</ul>
+
+						<div className="flex flex-col gap-2 rounded-xl bg-violet-600 mt-24 px-10 py-16 items-center text-white shadow-2xl shadow-black/30">
+							<span className="text-7xl max-w-5xl text-center font-bold">
+								Encontre a solução mais criativa para o seu negócio.
+							</span>
+							<span className="mt-4 max-w-3xl text-center">
+								Para um sonho grandioso ser realizado o primeiro passo precisa
+								ser dado e essa é a sua oportunidade de começar algo incrível.
+								Mude a sua presença digital com a Vortecxx.
+							</span>
+
+							<Link
+								href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!"
+								className="px-12 py-1.5 mt-12 bg-white font-bold rounded-full text-gray-950 hover:bg-white/80 transition-colors"
+							>
+								Entre em contato agora e comece construir seu futuro com a
+								gente!
+							</Link>
+						</div>
+					</section>
+				</main>
+			</section>
+		</div>
+	);
 }

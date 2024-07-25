@@ -2,32 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*::selection {
+  @apply bg-sky-900 text-violet-200;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 1px;
+  background-color: #1f1f25;
+  transition: "ease-in-out 300ms";
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #101012;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #101012;
+}
+
+*::-webkit-scrollbar-thumb {
+  transition: "ease-in-out 300ms";
+  border-radius: 5px;
+  @apply bg-violet-500;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  @apply bg-violet-700;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  @apply bg-violet-700;
+}
+
+@layer base {
+  body {
+    @apply font-body;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  a,
+  button {
+    all: unset;
+    @apply cursor-pointer;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  span {
+    @apply block;
+  }
+
+  input,
+  textarea,
+  select,
+  button,
+  span,
+  a {
+    @apply font-body;
   }
 }
