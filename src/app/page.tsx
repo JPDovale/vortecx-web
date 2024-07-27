@@ -161,8 +161,8 @@ export default function Home() {
 
 			<hr className="opacity-20" />
 
-			<section className="w-full pb-40 bg-gray-100 z-20">
-				<main className="w-full max-w-7xl mx-auto mt-12">
+			<section className="w-full bg-gray-100 z-20">
+				<main className="w-full max-w-7xl mx-auto mt-4 px-4">
 					<section className="flex flex-col">
 						<h3 className="font-bold text-xl text-violet-800" id="services">
 							Serviços
@@ -379,6 +379,113 @@ export default function Home() {
 						</div>
 					</section>
 				</main>
+
+				<footer className="bg-violet-950 w-full z-[100] mt-16 pt-10 text-white">
+					<section className="w-full max-w-7xl mx-auto grid grid-cols-2 gap-4 p-4">
+						<div className="flex items-center gap-2 self-start">
+							<Image
+								src="/logo-nb.png"
+								alt=""
+								width={40}
+								height={40}
+								quality={100}
+								priority
+							/>
+
+							<Link
+								href="https://vortecxx.com"
+								className="font-bold leading-none text-3xl text-white relative"
+							>
+								Vortecxx
+							</Link>
+						</div>
+
+						<div className="w-full grid grid-cols-3 text-white">
+							<ul className="flex flex-col gap-2">
+								<span className="font-bold opacity-60 text-sm">Produtos</span>
+
+								<li>
+									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
+										Web site
+									</Link>
+								</li>
+
+								<li>
+									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
+										Blog
+									</Link>
+								</li>
+
+								<li>
+									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
+										Landing page
+									</Link>
+								</li>
+
+								<li>
+									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
+										Web app
+									</Link>
+								</li>
+
+								<li>
+									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
+										App mobile
+									</Link>
+								</li>
+
+								<li>
+									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
+										App nativo
+									</Link>
+								</li>
+							</ul>
+
+							{/* <ul className="flex flex-col gap-2">
+								<span className="font-bold opacity-60 text-sm">Recursos</span>
+
+								<li>
+									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
+										Blog
+									</Link>
+								</li>
+							</ul> */}
+
+							<ul className="flex flex-col gap-2">
+								<span className="font-bold opacity-60 text-sm">Contato</span>
+
+								<li>
+									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
+										WhatsApp
+									</Link>
+								</li>
+
+								<li>
+									<Link href="mailto:joaopaulodovaledeo.60@gmail.com">
+										Email
+									</Link>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<hr className="opacity-20 py-2" />
+
+					<section className="w-full max-w-7xl mx-auto grid grid-cols-2 gap-4 p-4">
+						<div>
+							<span className="font-bold">Seu sonho vivo com a gente</span>
+							<span className="text-xs">
+								Software do jeito que você nunca viu. A melhor solução para o
+								seu negócio está aqui!
+							</span>
+						</div>
+
+						<div className="flex flex-col w-full h-full">
+							<span className="font-bold opacity-60 text-xs self-end mt-auto">
+								© Vortecxx. All rights reserved
+							</span>
+						</div>
+					</section>
+				</footer>
 			</section>
 		</div>
 	);
