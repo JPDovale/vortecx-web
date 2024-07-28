@@ -1,3 +1,5 @@
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import {
 	AppWindow,
 	ChevronsRight,
@@ -16,9 +18,9 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<div className="min-h-screen w-screen max-w-full flex flex-col overflow-x-hidden">
-			<section className="w-full absolute -z-10 bg-gray-900">
+			<section className="w-full absolute -z-10 bg-gray-900 max-lg:h-[66rem]">
 				<Image
-					className="w-full object-contain transform -scale-y-100 opacity-60"
+					className="w-full object-contain transform -scale-y-100 opacity-60 max-lg:h-full max-lg:object-cover"
 					src="/back.webp"
 					alt=""
 					width={1920}
@@ -26,6 +28,7 @@ export default function Home() {
 					quality={100}
 					priority
 				/>
+
 				<span
 					aria-hidden
 					className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"
@@ -33,90 +36,16 @@ export default function Home() {
 			</section>
 
 			<section className="w-full max-w-7xl px-4 flex flex-col mx-auto text-gray-200">
-				<header className="bg-gray-600/30 flex z-10 items-center justify-between px-4 py-3 mt-8 rounded-full backdrop-blur-md shadow-2xl shadow-black/50 fixed w-full max-w-7xl self-center">
-					<div className="flex items-center gap-2">
-						<Image
-							src="/logo-nb.png"
-							alt=""
-							width={28}
-							height={28}
-							quality={100}
-							priority
-						/>
-
-						<Link
-							href="https://vortecxx.com"
-							className="font-bold leading-none text-xl text-gray800 relative"
-						>
-							Vortecxx
-						</Link>
-					</div>
-
-					<nav>
-						<ul className="flex items-center gap-4">
-							<li>
-								<Link
-									href="/"
-									className="font-bold opacity-40 hover:opacity-100 hover:text-violet-400 ease-in duration-200"
-								>
-									Inicio
-								</Link>
-							</li>
-
-							<li>
-								<Link
-									href="#services"
-									className="font-bold opacity-40 hover:opacity-100 hover:text-violet-400 ease-in duration-200"
-								>
-									Serviços
-								</Link>
-							</li>
-							{/* 
-							<li>
-								<Link
-									href="/"
-									className="font-bold opacity-40 hover:opacity-100 hover:text-violet-400 ease-in duration-200"
-								>
-									Sobre
-								</Link>
-							</li> */}
-
-							<li>
-								<Link
-									href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!"
-									className="font-bold opacity-40 hover:opacity-100 hover:text-violet-400 ease-in duration-200"
-								>
-									Contato
-								</Link>
-							</li>
-						</ul>
-					</nav>
-
-					<div className="space-x-4">
-						<Link
-							href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!"
-							className="px-4 py-1 rounded-full shadow-md shadow-white/10 hover:shadow-lg hover:shadow-white/20 ease-in duration-200"
-						>
-							Contato
-						</Link>
-
-						{/* <button
-							type="button"
-							className="px-4 py-1 rounded-full shadow-md shadow-white/10 hover:shadow-lg hover:shadow-white/20 ease-in duration-200"
-						>
-							Registrar
-						</button> */}
-					</div>
-				</header>
+				<Header />
 
 				<div className="mt-32">
-					<section className="grid grid-cols-2 gap-10 pb-60">
+					<section className="grid grid-cols-2 gap-10 pb-60 max-lg:grid-cols-1">
 						<div className="flex flex-col gap-4 mt-6">
-							<h1 className="text-8xl font-black w-full relative">
+							<h1 className="text-8xl max-lg:text-7xl font-black w-full relative">
 								Software <br /> como você nunca viu!
 								<ScreenShareIcon
 									size={54}
-									className="absolute top-7 right-16 bg-violet-700 p-2 rounded-xl shadow-lg shadow-white/20"
+									className="absolute max-lg:hidden top-7 right-16 bg-violet-700 p-2 rounded-xl shadow-lg shadow-white/20"
 								/>
 							</h1>
 
@@ -168,9 +97,9 @@ export default function Home() {
 							Serviços
 						</h3>
 
-						<ul className="grid grid-cols-2 gap-12 gap-y-40 mt-6">
+						<ul className="grid grid-cols-2 gap-12 gap-y-40 max-lg:gap-6 max-lg:grid-cols-1 max-lg:flex max-lg:flex-col-reverse mt-6">
 							<li className="flex flex-col gap-2">
-								<h5 className="text-5xl font-extrabold">
+								<h5 className="text-5xl font-extrabold max-sm:text-4xl">
 									O Seu Site Online Rápido, Bonito e Estratégico
 								</h5>
 								<p className="font-bold opacity-70 mt-3">
@@ -182,7 +111,7 @@ export default function Home() {
 									para o sucesso do seu negócio.
 								</p>
 
-								<ul className="grid grid-cols-2 gap-x-2 gap-y-6 mt-2">
+								<ul className="grid grid-cols-2 gap-x-2 gap-y-6 mt-2 max-sm:grid-cols-1">
 									<li className="flex flex-col gap-2 border-l-4 border-l-violet-900 pl-2 py-1.5 rounded-xl shadow-xl">
 										<div className="flex gap-0.5 items-center font-bold">
 											<span className="p-1.5 bg-gray-300 rounded-full">
@@ -257,8 +186,9 @@ export default function Home() {
 								</div>
 							</li>
 
-							<li className="rounded-lg">
+							<li className="rounded-lg max-lg:mt-20">
 								<Image
+									className="rounded-lg"
 									src="/web-site1.jpg"
 									alt=""
 									width={1000}
@@ -268,7 +198,7 @@ export default function Home() {
 							</li>
 
 							<li className="flex flex-col gap-2">
-								<h5 className="text-5xl font-extrabold">
+								<h5 className="text-5xl font-extrabold max-sm:text-4xl">
 									O Seu Sonho, Com a Vortecxx É Realidade
 								</h5>
 								<p className="font-bold opacity-70 mt-3">
@@ -279,7 +209,7 @@ export default function Home() {
 									nascendo agora.
 								</p>
 
-								<ul className="grid grid-cols-2 gap-x-2 gap-y-6 mt-2">
+								<ul className="grid grid-cols-2 gap-x-2 gap-y-6 mt-2 max-sm:grid-cols-1">
 									<li className="flex flex-col gap-2 border-l-4 border-l-violet-900 pl-2 py-1.5 rounded-xl shadow-xl">
 										<div className="flex gap-0.5 items-center font-bold">
 											<span className="p-1.5 bg-gray-300 rounded-full">
@@ -348,8 +278,10 @@ export default function Home() {
 									</button> */}
 								</div>
 							</li>
+
 							<li className="rounded-lg">
 								<Image
+									className="rounded-lg"
 									src="/web-app1.png"
 									alt=""
 									width={1000}
@@ -359,133 +291,29 @@ export default function Home() {
 							</li>
 						</ul>
 
-						<div className="flex flex-col gap-2 rounded-xl bg-violet-600 mt-24 px-10 py-16 items-center text-white shadow-2xl shadow-black/30">
-							<span className="text-7xl max-w-5xl text-center font-bold">
+						<div className="flex flex-col gap-2 rounded-xl bg-violet-600 mt-24 px-10 max-sm:px-4 py-16 items-center text-white shadow-2xl shadow-black/30">
+							<span className="text-7xl max-w-5xl text-center font-bold max-sm:text-4xl">
 								Encontre a solução mais criativa para o seu negócio.
 							</span>
 							<span className="mt-4 max-w-3xl text-center">
 								Para um sonho grandioso ser realizado o primeiro passo precisa
 								ser dado e essa é a sua oportunidade de começar algo incrível.
-								Mude a sua presença digital com a Vortecxx.
+								Mude a sua presença digital com a Vortecxx. <br />
+								Entre em contato agora e comece construir seu futuro com a
+								gente!
 							</span>
 
 							<Link
 								href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!"
 								className="px-12 py-1.5 mt-12 bg-white font-bold rounded-full text-gray-950 hover:bg-white/80 transition-colors"
 							>
-								Entre em contato agora e comece construir seu futuro com a
-								gente!
+								Contatar
 							</Link>
 						</div>
 					</section>
 				</main>
 
-				<footer className="bg-violet-950 w-full z-[100] mt-16 pt-10 text-white">
-					<section className="w-full max-w-7xl mx-auto grid grid-cols-2 gap-4 p-4">
-						<div className="flex items-center gap-2 self-start">
-							<Image
-								src="/logo-nb.png"
-								alt=""
-								width={40}
-								height={40}
-								quality={100}
-								priority
-							/>
-
-							<Link
-								href="https://vortecxx.com"
-								className="font-bold leading-none text-3xl text-white relative"
-							>
-								Vortecxx
-							</Link>
-						</div>
-
-						<div className="w-full grid grid-cols-3 text-white">
-							<ul className="flex flex-col gap-2">
-								<span className="font-bold opacity-60 text-sm">Produtos</span>
-
-								<li>
-									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
-										Web site
-									</Link>
-								</li>
-
-								<li>
-									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
-										Blog
-									</Link>
-								</li>
-
-								<li>
-									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
-										Landing page
-									</Link>
-								</li>
-
-								<li>
-									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
-										Web app
-									</Link>
-								</li>
-
-								<li>
-									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
-										App mobile
-									</Link>
-								</li>
-
-								<li>
-									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
-										App nativo
-									</Link>
-								</li>
-							</ul>
-
-							{/* <ul className="flex flex-col gap-2">
-								<span className="font-bold opacity-60 text-sm">Recursos</span>
-
-								<li>
-									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
-										Blog
-									</Link>
-								</li>
-							</ul> */}
-
-							<ul className="flex flex-col gap-2">
-								<span className="font-bold opacity-60 text-sm">Contato</span>
-
-								<li>
-									<Link href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
-										WhatsApp
-									</Link>
-								</li>
-
-								<li>
-									<Link href="mailto:joaopaulodovaledeo.60@gmail.com">
-										Email
-									</Link>
-								</li>
-							</ul>
-						</div>
-					</section>
-					<hr className="opacity-20 py-2" />
-
-					<section className="w-full max-w-7xl mx-auto grid grid-cols-2 gap-4 p-4">
-						<div>
-							<span className="font-bold">Seu sonho vivo com a gente</span>
-							<span className="text-xs">
-								Software do jeito que você nunca viu. A melhor solução para o
-								seu negócio está aqui!
-							</span>
-						</div>
-
-						<div className="flex flex-col w-full h-full">
-							<span className="font-bold opacity-60 text-xs self-end mt-auto">
-								© Vortecxx. All rights reserved
-							</span>
-						</div>
-					</section>
-				</footer>
+				<Footer />
 			</section>
 		</div>
 	);
