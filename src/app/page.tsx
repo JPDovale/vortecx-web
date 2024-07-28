@@ -18,9 +18,9 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<div className="min-h-screen w-screen max-w-full flex flex-col overflow-x-hidden">
-			<section className="w-full absolute -z-10 bg-gray-900 max-xl:h-[66rem] max-sm:h-[72rem]">
+			<section className="w-full absolute -z-10 bg-gray-900 max-lg:h-[66rem] max-sm:h-[72rem]">
 				<Image
-					className="w-full object-contain transform -scale-y-100 opacity-60 max-xl:h-full max-xl:object-cover"
+					className="w-full object-contain transform -scale-y-100 opacity-60 max-lg:h-full max-lg:object-cover"
 					src="/back.webp"
 					alt=""
 					width={1920}
