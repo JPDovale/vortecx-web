@@ -18,9 +18,9 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<div className="min-h-screen w-screen max-w-full flex flex-col overflow-x-hidden">
-			<section className="w-full absolute -z-10 bg-gray-900 max-lg:h-[66rem]">
+			<section className="w-full absolute -z-10 bg-gray-900 max-xl:h-[66rem] max-sm:h-[72rem]">
 				<Image
-					className="w-full object-contain transform -scale-y-100 opacity-60 max-lg:h-full max-lg:object-cover"
+					className="w-full object-contain transform -scale-y-100 opacity-60 max-xl:h-full max-xl:object-cover"
 					src="/back.webp"
 					alt=""
 					width={1920}
@@ -41,12 +41,8 @@ export default function Home() {
 				<div className="mt-32">
 					<section className="grid grid-cols-2 gap-10 pb-60 max-lg:grid-cols-1">
 						<div className="flex flex-col gap-4 mt-6">
-							<h1 className="text-8xl max-lg:text-7xl font-black w-full relative">
+							<h1 className="text-8xl max-lx:text-7xl font-black w-full relative">
 								Software <br /> como você nunca viu!
-								<ScreenShareIcon
-									size={54}
-									className="absolute max-lg:hidden top-7 right-16 bg-violet-700 p-2 rounded-xl shadow-lg shadow-white/20"
-								/>
 							</h1>
 
 							<div className="flex items-center gap-4">
