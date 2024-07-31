@@ -1,1 +1,1 @@
-export { default } from "@/app/Home";
+export { default } from "@/app/home";

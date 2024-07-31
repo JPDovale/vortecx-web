@@ -5,15 +5,23 @@ import { NavLink } from "./NavLink";
 import { Navigation } from "./Navigation";
 import { Root } from "./Root";
 
-export function Header() {
+interface HeaderProps {
+	invert?: boolean;
+}
+
+export function Header(props: HeaderProps = {}) {
+	const { invert = false } = props;
+
 	return (
-		<Root>
+		<Root invert={invert}>
 			<Icon />
 
 			<Navigation>
 				<NavLink href="/">Inicio</NavLink>
 
 				<NavLink href="#services">Serviços</NavLink>
+
+				<NavLink href="/articles">Blog</NavLink>
 
 				<NavLink href="https://wa.me/5541988893290?text=Tenho%20interesse%20em%20um%20site%20profissional%20de%20alta%20qualidade!">
 					Contato

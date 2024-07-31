@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
 	title: "Vortecxx",
-	description: "All you need for your web site and apps",
+	description: "Tudo o que você precisa para sites e apps",
 };
 
 export default function RootLayout({

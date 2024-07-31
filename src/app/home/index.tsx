@@ -1,5 +1,5 @@
-import { Background } from "@/app/Home/components/Background";
-import { Presentation } from "@/app/Home/components/Presentation";
+import { Background } from "@/app/home/components/Background";
+import { Presentation } from "@/app/home/components/Presentation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Card } from "./components/Card";
@@ -16,7 +16,7 @@ export default function HomePage() {
 
 			<Presentation />
 
-			<section className="w-full bg-gray-100 z-20">
+			<section className="w-full bg-gray-100 z-50">
 				<main className="w-full max-w-7xl mx-auto mt-4 px-4">
 					<SectionRoot>
 						<SectionTitle id="services">Serviços</SectionTitle>
