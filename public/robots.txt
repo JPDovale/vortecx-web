@@ -1,6 +1,9 @@
 # *
 User-agent: *
-Allow: /
+Disallow:
+
+User-agent: Googlebot
+Disallow:
 
 # Host
 Host: https://vortecxx.com

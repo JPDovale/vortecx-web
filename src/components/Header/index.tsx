@@ -20,7 +20,7 @@ export function Header(props: HeaderProps = {}) {
 			<Navigation>
 				<NavLink href="/">Inicio</NavLink>
 
-				<NavLink href="#services">Serviços</NavLink>
+				<NavLink href="/#services">Serviços</NavLink>
 
 				<NavLink href="/articles">Blog</NavLink>
 

@@ -36,7 +36,7 @@ export function Hamburger() {
 
 					<Link
 						className="font-bold opacity-60 text-lg hover:opacity-100 hover:text-violet-400 ease-in duration-200"
-						href="#services"
+						href="/#services"
 						onClick={() => setIsOpen(false)}
 					>
 						Serviços
