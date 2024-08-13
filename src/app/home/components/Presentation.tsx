@@ -3,9 +3,9 @@ import { AppWindow, ClipboardCheck, Code, Server } from "lucide-react";
 export function Presentation() {
 	return (
 		<section className="w-full max-w-7xl px-4 flex flex-col mx-auto text-white">
-			<div className="grid grid-cols-2 gap-10 pb-60 max-lg:grid-cols-1 mt-32">
+			<div className="grid grid-cols-2 gap-10 pb-60 max-lg:grid-cols-1 mt-32 max-lg:mt-24 max-lg:pb-32">
 				<div className="flex flex-col gap-4 mt-6">
-					<h1 className="text-8xl max-lx:text-7xl font-black w-full relative">
+					<h1 className="text-8xl max-xl:text-7xl font-black w-full relative">
 						Software <br /> como você nunca viu!
 					</h1>
 

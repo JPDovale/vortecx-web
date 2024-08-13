@@ -1,5 +1,6 @@
 import { ActionItem } from "./ActionItem";
 import { Actions } from "./Actions";
+import { Hamburger } from "./Hamburger";
 import { Icon } from "./Icon";
 import { NavLink } from "./NavLink";
 import { Navigation } from "./Navigation";
@@ -33,6 +34,8 @@ export function Header(props: HeaderProps = {}) {
 					Contato
 				</ActionItem>
 			</Actions>
+
+			<Hamburger />
 		</Root>
 	);
 }
